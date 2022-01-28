@@ -5,15 +5,30 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "test": "jest",
+        "test": "jest --watchAll",
+        "test:coverage": "jest --coverage",
         "lint": "eslint "
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.16.8",
         "eslint": "^8.7.0",
         "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jest": "^26.0.0",
         "jest": "^27.4.7"
+    },
+    "prettier": {
+        "singleQuote": true
+    },
+    "babel": {
+        "env": {
+            "test": {
+                "plugins": [
+                    "@babel/plugin-transform-modules-commonjs"
+                ]
+            }
+        }
     }
 }

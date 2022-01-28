@@ -1,5 +1,5 @@
 package-lock.json
-
+.scannerwork/
 # Logs
 logs
 *.log
